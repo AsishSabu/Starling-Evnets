@@ -7,9 +7,9 @@ import { Heart, Building2, Cake,  } from "lucide-react"
 const services = [
   {
     id: 1,
-    title: "Wedding Planning",
+    title: "Destination Weddings",
     description:
-      "Complete wedding planning services from venue selection to day-of coordination. Make your dream wedding a reality.",
+      "Turn your love story into a fairytale with a magical destination wedding. From breathtaking venues to elite arrangements, we make your big day truly unforgettable.",
     image: "/images/img1.jpg",
     icon: Heart,
     features: ["Venue Selection", "Catering", "Photography", "Decoration"],
@@ -17,25 +17,26 @@ const services = [
   },
   {
     id: 2,
-    title: "Corporate Events",
+    title: "Wedding Planning",
     description:
-      "Professional corporate event management including conferences, seminars, product launches, and team building activities.",
+      "Celebrate love with zero stress! From the first step to the final 'I do', we take care of every detail to make your wedding a seamless and joyful celebration.",
     image: "/images/img2.jpg",
     icon: Building2,
-    features: ["Conference Planning", "Team Building", "Product Launches", "Networking Events"],
+    features: ["Ceremony Coordination", "Guest Management", "Vendor Booking", "Timeline Planning"],
     price: "Starting from $1,800",
   },
   {
     id: 3,
-    title: "Birthday Parties",
-    description: "Memorable birthday celebrations for all ages. From intimate gatherings to grand celebrations.",
+    title: "Event Planning",
+    description:
+      "Bringing brilliance to every event — from corporate gatherings to grand celebrations. We design, manage, and execute with precision and creativity.",
     image: "/images/img3.jpg",
     icon: Cake,
     features: ["Theme Planning", "Entertainment", "Catering", "Decoration"],
     price: "Starting from $800",
   },
+];
 
-]
 
 export function ServicesSection() {
   return (
@@ -56,7 +57,7 @@ export function ServicesSection() {
           {services.map((service) => {
             const IconComponent = service.icon
             return (
-              <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden  p-0">
                 <div className="relative h-80 overflow-hidden">
                   <Image
                     src={service.image || "/placeholder.svg"}
@@ -86,7 +87,7 @@ export function ServicesSection() {
                       </Badge>
                     ))}
                   </div>
-                  <Button className="w-full group-hover:bg-primary/90 transition-colors">Learn More</Button>
+                  {/* <Button className="w-full group-hover:bg-primary/90 transition-colors">Learn More</Button> */}
                 </CardContent>
               </Card>
             )
