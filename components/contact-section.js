@@ -88,9 +88,9 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-semibold mb-1">Email Address</h4>
                     <p className="text-muted-foreground">
-                      info@eventcraft.com
+                      info@StarlingEvents.com
                       <br />
-                      support@eventcraft.com
+                      support@StarlingEvents.com
                     </p>
                   </div>
                 </div>
@@ -236,7 +236,7 @@ export function ContactSection() {
               <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs">
                 <div className="flex items-center space-x-2 mb-2">
                   <Calendar className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">EventCraft</span>
+                  <span className="font-semibold">StarlingEvents</span>
                 </div>
                 <div className="space-y-1 text-sm text-muted-foreground">
                   <div className="flex items-center space-x-2">

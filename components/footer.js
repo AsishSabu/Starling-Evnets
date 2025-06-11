@@ -1,8 +1,17 @@
-import Link from "next/link"
-import { Calendar, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Separator } from "@/components/ui/separator"
+import Link from "next/link";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -12,24 +21,46 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Calendar className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold">EventCraft</span>
+              <Image
+                src="/images/logo.png"
+                alt="Starling Events Logo"
+                width={24}
+                height={24}
+                className="group-hover:rotate-12 transition-transform duration-500"
+              />
+              <span className="text-2xl font-bold">StarlingEvents</span>
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Creating unforgettable experiences through exceptional event planning and management. Your vision, our
-              expertise.
+              Creating unforgettable experiences through exceptional event
+              planning and management. Your vision, our expertise.
             </p>
             <div className="flex space-x-4">
-              <Button size="icon" variant="ghost" className="hover:bg-slate-800">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-slate-800"
+              >
                 <Facebook className="h-5 w-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-slate-800">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-slate-800"
+              >
                 <Twitter className="h-5 w-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-slate-800">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-slate-800"
+              >
                 <Instagram className="h-5 w-5" />
               </Button>
-              <Button size="icon" variant="ghost" className="hover:bg-slate-800">
+              <Button
+                size="icon"
+                variant="ghost"
+                className="hover:bg-slate-800"
+              >
                 <Linkedin className="h-5 w-5" />
               </Button>
             </div>
@@ -40,27 +71,42 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="/"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#services"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#about"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#gallery" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#gallery"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#contact"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -72,27 +118,42 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Our Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Wedding Planning
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Corporate Events
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Birthday Parties
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Music Concerts
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-slate-300 hover:text-white transition-colors"
+                >
                   Photography
                 </Link>
               </li>
@@ -105,7 +166,9 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-slate-300">123 Event Street, Downtown, NY 10001</span>
+                <span className="text-slate-300">
+                  123 Event Street, Downtown, NY 10001
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
@@ -113,7 +176,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-slate-300">info@eventcraft.com</span>
+                <span className="text-slate-300">info@StarlingEvents.com</span>
               </div>
             </div>
 
@@ -136,7 +199,7 @@ export function Footer() {
         <Separator className="my-8 bg-slate-700" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
-          <p>&copy; 2024 EventCraft. All rights reserved.</p>
+          <p>&copy; 2024 StarlingEvents. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-white transition-colors">
               Privacy Policy
@@ -151,5 +214,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
