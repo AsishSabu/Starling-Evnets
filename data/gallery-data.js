@@ -9,7 +9,7 @@ export const galleryData = {
     title: "Featured",
     subtitle: "Gallery",
     description:
-      "Every celebration tells a unique story, and we craft each narrative with unparalleled artistry and attention to detail. Our curated collection showcases the extraordinary moments we've had the privilege to create.",
+      "Every celebration tells a unique story, and we craft each narrative with unparalleled artistry and attention to detail. Our curated collection showcases the extraordinary moments we ve had the privilege to create.",
   },
 
   mainFeatures: [

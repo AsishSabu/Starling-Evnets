@@ -6,7 +6,7 @@ import { GalleryGrid } from "@/components/gallery-grid"
 export const metadata = {
   title: "Gallery | Starling Events",
   description:
-    "Explore our portfolio of stunning events, decorations, and memorable moments we've created for our clients.",
+    "Explore our portfolio of stunning events, decorations, and memorable moments we ve created for our clients.",
 }
 
 export default function GalleryPage() {

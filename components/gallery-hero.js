@@ -26,7 +26,7 @@ export function GalleryHero() {
           <h1 className="text-5xl md:text-7xl font-extralight mb-6 leading-tight">
             <span className="block">Moments</span>
             <span className="block bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 bg-clip-text text-transparent font-light">
-              We've Crafted
+              We ve Crafted
             </span>
           </h1>
 
@@ -37,7 +37,7 @@ export function GalleryHero() {
           </div>
 
           <p className="text-xl text-gray-600 leading-relaxed font-light max-w-3xl mx-auto">
-            Explore our collection of stunning events, beautiful decorations, and unforgettable moments we've created
+            Explore our collection of stunning events, beautiful decorations, and unforgettable moments we ve created
             for our clients. Each image tells a story of dreams brought to life.
           </p>
         </div>

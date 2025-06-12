@@ -1,9 +1,9 @@
 export const contactData = {
   header: {
     title: "Contact Us",
-    subtitle: "Let's Create Something Amazing",
+    subtitle: "Let s Create Something Amazing",
     description:
-      "Ready to turn your vision into reality? We're here to listen, understand, and create the perfect event experience for you.",
+      "Ready to turn your vision into reality? We re here to listen, understand, and create the perfect event experience for you.",
   },
 
   contactInfo: {

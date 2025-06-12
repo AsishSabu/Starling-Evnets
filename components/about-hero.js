@@ -40,7 +40,7 @@ export function AboutHero() {
             </div>
 
             <p className="text-xl text-gray-600 leading-relaxed font-light mb-8">
-              At Starling Events, we believe every celebration deserves to be extraordinary. For over five years, we've
+              At Starling Events, we believe every celebration deserves to be extraordinary. For over five years, we ve
               been transforming dreams into reality, creating unforgettable experiences that touch hearts and create
               lasting memories.
             </p>

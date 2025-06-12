@@ -3,15 +3,15 @@ export const aboutData = {
     title: "About Us",
     subtitle: "Creating Magical Moments",
     description:
-      "At Starling Events, we believe every celebration deserves to be extraordinary. For over five years, we've been transforming dreams into reality, creating unforgettable experiences that touch hearts and create lasting memories.",
+      "At Starling Events, we believe every celebration deserves to be extraordinary. For over five years, we ve been transforming dreams into reality, creating unforgettable experiences that touch hearts and create lasting memories.",
   },
 
   story: {
     title: "Our Story",
     content: [
       "Founded in 2018, Starling Events emerged from a passion for creating meaningful celebrations. What began as a small team handling local events has grown into a comprehensive event management company serving clients across the region.",
-      "Our journey has been defined by our commitment to excellence, attention to detail, and the joy we find in bringing our clients' visions to life. With each event, we've expanded our expertise, refined our approach, and strengthened our network of vendors and artists.",
-      "Today, we're proud to be one of the most trusted event planning companies in Coimbatore, known for our creative solutions, professional execution, and warm, personalized service. But we're not stopping here – we continue to innovate, expand our services, and find new ways to exceed our clients' expectations.",
+      "Our journey has been defined by our commitment to excellence, attention to detail, and the joy we find in bringing our clients  visions to life. With each event, we ve expanded our expertise, refined our approach, and strengthened our network of vendors and artists.",
+      "Today, we re proud to be one of the most trusted event planning companies in Coimbatore, known for our creative solutions, professional execution, and warm, personalized service. But we re not stopping here – we continue to innovate, expand our services, and find new ways to exceed our clients  expectations.",
     ],
     image: "/placeholder.svg?height=800&width=600&text=Our+Story",
   },

@@ -8,7 +8,7 @@ import { ContactMap } from "@/components/contact-map"
 export const metadata = {
   title: "Contact Us | Starling Events",
   description:
-    "Get in touch with Starling Events for your dream event planning. We're here to make your special moments unforgettable.",
+    "Get in touch with Starling Events for your dream event planning. We re here to make your special moments unforgettable.",
 }
 
 export default function ContactPage() {

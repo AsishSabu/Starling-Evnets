@@ -14,7 +14,7 @@ export function ContactMap() {
           </Badge>
           <h2 className="text-4xl font-light mb-4">Visit Our Studio</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Come see our event planning studio and meet our team. We'd love to show you our portfolio and discuss your
+            Come see our event planning studio and meet our team. We d love to show you our portfolio and discuss your
             vision in person.
           </p>
         </div>

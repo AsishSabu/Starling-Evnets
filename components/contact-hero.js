@@ -24,7 +24,7 @@ export function ContactHero() {
           </Badge>
 
           <h1 className="text-5xl md:text-7xl font-extralight mb-6 leading-tight">
-            <span className="block">Let's Create</span>
+            <span className="block">Let s Create</span>
             <span className="block bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 bg-clip-text text-transparent font-light">
               Something Amazing
             </span>
@@ -37,8 +37,8 @@ export function ContactHero() {
           </div>
 
           <p className="text-xl text-gray-600 leading-relaxed font-light max-w-3xl mx-auto mb-12">
-            Ready to turn your vision into reality? We're here to listen, understand, and create the perfect event
-            experience for you. Let's start planning your unforgettable moment.
+            Ready to turn your vision into reality? We re here to listen, understand, and create the perfect event
+            experience for you. Let s start planning your unforgettable moment.
           </p>
 
           {/* Quick contact info */}

@@ -62,7 +62,7 @@ export function ContactForm() {
               <CardTitle className="text-3xl font-light">Send Us a Message</CardTitle>
               <Sparkles className="w-6 h-6 text-purple-500 ml-2 animate-pulse" />
             </div>
-            <p className="text-gray-600">Tell us about your dream event and we'll make it happen</p>
+            <p className="text-gray-600">Tell us about your dream event and we ll make it happen</p>
           </CardHeader>
           <CardContent className="p-8">
             {isSubmitted ? (
@@ -72,11 +72,11 @@ export function ContactForm() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-gray-800">Message Sent Successfully!</h3>
                 <p className="text-gray-600 mb-6">
-                  Thank you for reaching out! We'll get back to you within 2 hours with a personalized response.
+                  Thank you for reaching out! We ll get back to you within 2 hours with a personalized response.
                 </p>
                 <div className="bg-gradient-to-r from-rose-50 to-purple-50 rounded-xl p-4">
                   <p className="text-sm text-gray-700">
-                    <strong>What's next?</strong> Our event planning team will review your requirements and contact you
+                    <strong>What s next?</strong> Our event planning team will review your requirements and contact you
                     with initial ideas and availability.
                   </p>
                 </div>

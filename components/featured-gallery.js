@@ -9,7 +9,7 @@ export function FeaturedGallery() {
   const { header, showcaseImage, galleryGrid, bouquetSection, bouquets, cta } =
     galleryData;
 
-  // Create features directly since they're now in the data
+  // Create features directly since they re now in the data
   const leftFeature = {
     position: "left",
     title: "Luxury",

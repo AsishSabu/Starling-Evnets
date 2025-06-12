@@ -184,7 +184,7 @@ export const servicesData = {
       id: 10,
       title: "Birthday Celebrations",
       description:
-        "Creative and fun birthday parties for all ages. From kids' themed parties to milestone adult celebrations, we make birthdays special.",
+        "Creative and fun birthday parties for all ages. From kids  themed parties to milestone adult celebrations, we make birthdays special.",
       image: "/images/img6.jpg",
       icon: Cake,
       features: ["Theme Design", "Cake & Catering", "Entertainment", "Decoration"],
@@ -220,7 +220,7 @@ export const servicesData = {
       id: 13,
       title: "Product Launching",
       description:
-        "Impactful product launch events that highlight your product's features and create buzz. Our team ensures your product gets the attention it deserves.",
+        "Impactful product launch events that highlight your product s features and create buzz. Our team ensures your product gets the attention it deserves.",
       image: "/images/img6.jpg",
       icon: Megaphone,
       features: ["Brand Integration", "Media Management", "Guest Experience", "Technical Setup"],

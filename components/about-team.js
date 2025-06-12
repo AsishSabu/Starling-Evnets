@@ -110,7 +110,7 @@ export function AboutTeam() {
           <CardContent className="p-12">
             <h3 className="text-3xl font-light mb-4">Join Our Amazing Team</h3>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              We're always looking for passionate, creative individuals who share our love for creating magical moments.
+              We re always looking for passionate, creative individuals who share our love for creating magical moments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="secondary" size="lg" className="bg-white text-rose-600 hover:bg-gray-100">

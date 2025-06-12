@@ -3,7 +3,7 @@ export const testimonialsData = {
     title: "Client Testimonials",
     subtitle: "What Our Clients Say",
     description:
-      "Don't just take our word for it. Here's what our clients have to say about their experience with Starling Events.",
+      "Don t just take our word for it. Here s what our clients have to say about their experience with Starling Events.",
   },
 
   testimonials: [
@@ -23,14 +23,14 @@ export const testimonialsData = {
       event: "Corporate Product Launch",
       image: "/placeholder.svg?height=100&width=100&text=AK",
       quote:
-        "We hired Starling Events for our company's major product launch, and they exceeded all expectations. The stage setup, technical arrangements, and overall management were flawless. They truly understood our brand vision and brought it to life.",
+        "We hired Starling Events for our company s major product launch, and they exceeded all expectations. The stage setup, technical arrangements, and overall management were flawless. They truly understood our brand vision and brought it to life.",
       rating: 5,
       featured: true,
     },
     {
       id: 3,
       name: "Meera Sharma",
-      event: "Daughter's Birthday Party",
+      event: "Daughter s Birthday Party",
       image: "/placeholder.svg?height=100&width=100&text=MS",
       quote:
         "The themed birthday party that Starling Events arranged for my daughter was magical! The decorations, entertainment, and food were all perfect. My daughter felt like a princess, and all the kids had an amazing time.",
@@ -39,11 +39,11 @@ export const testimonialsData = {
     },
     {
       id: 4,
-      name: "St. Joseph's College",
+      name: "St. Joseph s College",
       event: "Annual Cultural Festival",
       image: "/placeholder.svg?height=100&width=100&text=SJC",
       quote:
-        "We've been working with Starling Events for our annual cultural festival for three years now. Their team understands the unique requirements of college events and always delivers high-quality sound, lighting, and stage management.",
+        "We ve been working with Starling Events for our annual cultural festival for three years now. Their team understands the unique requirements of college events and always delivers high-quality sound, lighting, and stage management.",
       rating: 5,
       featured: false,
     },

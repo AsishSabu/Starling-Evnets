@@ -20,7 +20,7 @@ export function AboutStory() {
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed font-light">
             Our story started with a simple belief: every moment worth celebrating deserves to be perfect. What began as
-            a passion project has grown into a trusted partner for life's most important occasions.
+            a passion project has grown into a trusted partner for life s most important occasions.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export function AboutStory() {
             <div>
               <h3 className="text-2xl font-light mb-4 text-gray-800">Our Growth</h3>
               <p className="text-gray-600 leading-relaxed">
-                Over the years, we've had the privilege of planning hundreds of events, from intimate weddings to
+                Over the years, we ve had the privilege of planning hundreds of events, from intimate weddings to
                 large-scale corporate gatherings. Each event has taught us something new and helped us refine our
                 approach to creating truly memorable experiences.
               </p>
@@ -47,8 +47,8 @@ export function AboutStory() {
             <div>
               <h3 className="text-2xl font-light mb-4 text-gray-800">Today & Tomorrow</h3>
               <p className="text-gray-600 leading-relaxed">
-                Today, we're proud to be one of the most trusted event planning companies in the region. But we're not
-                stopping here – we continue to innovate, expand our services, and find new ways to exceed our clients'
+                Today, we re proud to be one of the most trusted event planning companies in the region. But we re not
+                stopping here – we continue to innovate, expand our services, and find new ways to exceed our clients
                 expectations.
               </p>
             </div>
