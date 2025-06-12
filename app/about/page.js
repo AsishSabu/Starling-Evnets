@@ -2,7 +2,6 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { AboutHero } from "@/components/about-hero"
 import { AboutStory } from "@/components/about-story"
-import { AboutTeam } from "@/components/about-team"
 import { AboutValues } from "@/components/about-values"
 import { AboutStats } from "@/components/about-stats"
 
@@ -21,7 +20,6 @@ export default function AboutPage() {
         <AboutStory />
         <AboutStats />
         <AboutValues />
-        <AboutTeam />
       </main>
       <Footer />
     </div>

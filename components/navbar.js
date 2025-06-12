@@ -13,7 +13,7 @@ const NAV_ITEMS = [
   { name: "Services", href: "/#services" },
   { name: "About", href: "/about" }, // Updated to link to the about page
   { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" }, // Updated to link to the contact page
+  { name: "Contact", href: "/#contact" }, // Updated to link to the contact page
 ]
 
 const SOCIAL_LINKS = [
@@ -217,10 +217,10 @@ export function Navbar() {
                   </h4>
                   <div className="space-y-2 text-sm text-gray-600">
                     <p className="hover:text-rose-600 transition-colors duration-300 cursor-pointer">
-                      📞 +1 (555) 123-4567
+                      📞 +919400632524
                     </p>
                     <p className="hover:text-purple-600 transition-colors duration-300 cursor-pointer">
-                      ✉️ info@starlingevents.com
+                      ✉️ starlingeventscmt@gmail.com
                     </p>
                     <p className="hover:text-amber-600 transition-colors duration-300 cursor-pointer">
                       📍 123 Event Street, Downtown
