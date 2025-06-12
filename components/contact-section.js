@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
+import { MapPin, Phone, Mail, Clock} from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -59,8 +59,6 @@ export function ContactSection() {
                       +919061326616
                       <br />
                       +919947467440
-                      <br />
-                      +918592881505
                     </p>
                   </div>
                 </div>
@@ -116,7 +114,7 @@ export function ContactSection() {
                   </p>
 
                   <div className="space-y-4">
-                    <a href="tel:+15551234567">
+                    <a href="tel:+919400632524">
                       <Button className="w-full" size="lg">
                         <Phone className="h-4 w-4 mr-2" />
                         Call Now: +919400632524
@@ -157,37 +155,16 @@ export function ContactSection() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0"
               />
-
-              {/* Map Overlay with Contact Info */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">Starling Events</span>
-                </div>
-                <div className="space-y-1 text-sm text-muted-foreground">
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="h-4 w-4" />
-                    <span>Starling Events, Cumbummettu</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Phone className="h-4 w-4" />
-                    <span>+91 9400632524</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Clock className="h-4 w-4" />
-                    <span>Mon-Fri: 9AM - 6PM</span>
-                  </div>
-                </div>
-                <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=9.746567,77.2159058"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button size="sm" className="w-full mt-3">
-                    Get Directions
-                  </Button>
-                </a>
-              </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=9.746567,77.2159058"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-1 right-2"
+              >
+                <Button size="sm" className="w-full mt-3">
+                  Get Directions
+                </Button>
+              </a>
             </div>
           </Card>
         </div>
