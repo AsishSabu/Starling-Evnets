@@ -57,8 +57,8 @@ export function AboutValues() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed font-light max-w-3xl mx-auto">
-            Our core values shape every decision we make and every event we plan. They're not just words on a page –
-            they're the principles that guide our daily work.
+            Our core values shape every decision we make and every event we plan. They re not just words on a page
+            they re the principles that guide our daily work.
           </p>
         </div>
 
