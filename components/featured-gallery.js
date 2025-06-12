@@ -1,16 +1,36 @@
-import React from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Star, Crown, Sparkles } from "lucide-react"
-import { galleryData } from "@/data/gallery-data"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Star, Crown, Sparkles, Heart } from "lucide-react";
+import { galleryData } from "@/data/gallery-data";
+import Link from "next/link";
 
 export function FeaturedGallery() {
-  const { header, mainFeatures, showcaseImage, galleryGrid, bouquetSection, bouquets, cta } = galleryData
+  const { header, showcaseImage, galleryGrid, bouquetSection, bouquets, cta } =
+    galleryData;
 
-  // Get left and right features
-  const leftFeature = mainFeatures.find((feature) => feature.position === "left")
-  const rightFeature = mainFeatures.find((feature) => feature.position === "right")
+  // Create features directly since they're now in the data
+  const leftFeature = {
+    position: "left",
+    title: "Luxury",
+    subtitle: "Decoration",
+    description:
+      "Transform ordinary spaces into extraordinary experiences. Our bespoke decoration services blend elegance with innovation, creating atmospheres that captivate and inspire.",
+    buttonText: "DISCOVER MORE",
+    rating: 5,
+    gradient: "from-rose-400 to-purple-500",
+  };
+
+  const rightFeature = {
+    position: "right",
+    title: "Bespoke",
+    subtitle: "Events",
+    description:
+      "Every dream deserves a perfect execution. We collaborate intimately with our clients to bring their unique visions to life, crafting celebrations that reflect their personal story and style.",
+    buttonText: "VIEW DETAILS",
+    rating: 5,
+    gradient: "from-purple-400 to-amber-500",
+  };
 
   // Helper function to render stars
   const renderStars = (count) => {
@@ -20,8 +40,8 @@ export function FeaturedGallery() {
         className="w-3 h-3 sm:w-4 sm:h-4 fill-amber-400 text-amber-400 animate-pulse"
         style={{ animationDelay: `${index * 0.1}s` }}
       />
-    ))
-  }
+    ));
+  };
 
   return (
     <section className="relative py-8 sm:py-16 lg:py-20 bg-gradient-to-b from-slate-50 via-white to-rose-50/30 overflow-hidden">
@@ -45,14 +65,17 @@ export function FeaturedGallery() {
             variant="outline"
             className="mb-4 sm:mb-6 px-4 sm:px-6 py-2 text-xs sm:text-sm font-light border-rose-200 text-rose-600 animate-fade-in-up"
           >
-            {React.createElement(header.badge.icon, { className: "w-3 h-3 sm:w-4 sm:h-4 mr-2 animate-pulse" })}
+            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-2 animate-pulse" />
             {header.badge.text}
           </Badge>
 
           {/* Enhanced Title Animation for Mobile */}
           <div className="mb-6 sm:mb-8 lg:mb-10">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight text-gray-900 tracking-tight leading-tight">
-              <span className="block animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <span
+                className="block animate-fade-in-up"
+                style={{ animationDelay: "0.3s" }}
+              >
                 {header.title}
               </span>
               <span
@@ -94,8 +117,13 @@ export function FeaturedGallery() {
                   className={`absolute -top-2 sm:-top-4 -left-2 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br ${leftFeature.gradient} rounded-full opacity-20 animate-pulse`}
                 ></div>
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-gray-900 mb-4 sm:mb-6 relative leading-tight">
-                  <span className="block animate-fade-in-up">{leftFeature.title}</span>
-                  <span className="block text-rose-500 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                  <span className="block animate-fade-in-up">
+                    {leftFeature.title}
+                  </span>
+                  <span
+                    className="block text-rose-500 animate-fade-in-up"
+                    style={{ animationDelay: "0.2s" }}
+                  >
                     {leftFeature.subtitle}
                   </span>
                 </h3>
@@ -117,10 +145,14 @@ export function FeaturedGallery() {
                   variant="outline"
                   className="group relative overflow-hidden border-2 border-gray-300 hover:border-rose-400 text-gray-700 hover:text-rose-600 px-6 sm:px-8 py-3 transition-all duration-300 w-full sm:w-auto hover:scale-105"
                 >
-                  <span className="relative z-10 text-sm sm:text-base">{leftFeature.buttonText}</span>
+                  <span className="relative z-10 text-sm sm:text-base">
+                    {leftFeature.buttonText}
+                  </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-rose-50 to-purple-50 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                 </Button>
-                <div className="flex space-x-1 justify-center sm:justify-start">{renderStars(leftFeature.rating)}</div>
+                <div className="flex space-x-1 justify-center sm:justify-start">
+                  {renderStars(leftFeature.rating)}
+                </div>
               </div>
             </div>
           )}
@@ -133,7 +165,7 @@ export function FeaturedGallery() {
             <div className="relative group">
               {/* Decorative Frame */}
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-rose-400 via-purple-500 to-amber-500 rounded-xl sm:rounded-2xl opacity-20 blur-xl group-hover:opacity-30 transition-opacity duration-500 animate-gradient-x"></div>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl">
+              <div className="relative aspect-[5/6] overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl">
                 <Image
                   src={showcaseImage.src || "/placeholder.svg"}
                   alt={showcaseImage.alt}
@@ -143,14 +175,12 @@ export function FeaturedGallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
 
                 {/* Floating Badge - Mobile Optimized */}
-                <div className="absolute top-3 sm:top-6 right-3 sm:right-6 bg-white/90 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full shadow-lg animate-fade-in-down">
+                {/* <div className="absolute top-3 sm:top-6 right-3 sm:right-6 bg-white/90 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full shadow-lg animate-fade-in-down">
                   <div className="flex items-center space-x-1 sm:space-x-2">
-                    {React.createElement(showcaseImage.badge.icon, {
-                      className: "w-3 h-3 sm:w-4 sm:h-4 text-rose-500 animate-pulse",
-                    })}
+                    <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-rose-500 animate-pulse" />
                     <span className="text-xs sm:text-sm font-medium text-gray-700">{showcaseImage.badge.text}</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -166,8 +196,13 @@ export function FeaturedGallery() {
                   className={`absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br ${rightFeature.gradient} rounded-full opacity-20 animate-pulse`}
                 ></div>
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-gray-900 mb-4 sm:mb-6 relative text-left lg:text-right leading-tight">
-                  <span className="block animate-fade-in-up">{rightFeature.title}</span>
-                  <span className="block text-purple-500 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                  <span className="block animate-fade-in-up">
+                    {rightFeature.title}
+                  </span>
+                  <span
+                    className="block text-purple-500 animate-fade-in-up"
+                    style={{ animationDelay: "0.2s" }}
+                  >
                     {rightFeature.subtitle}
                   </span>
                 </h3>
@@ -192,7 +227,9 @@ export function FeaturedGallery() {
                   variant="outline"
                   className="group relative overflow-hidden border-2 border-gray-300 hover:border-purple-400 text-gray-700 hover:text-purple-600 px-6 sm:px-8 py-3 transition-all duration-300 w-full sm:w-auto order-1 sm:order-2 hover:scale-105"
                 >
-                  <span className="relative z-10 text-sm sm:text-base">{rightFeature.buttonText}</span>
+                  <span className="relative z-10 text-sm sm:text-base">
+                    {rightFeature.buttonText}
+                  </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-amber-50 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                 </Button>
               </div>
@@ -249,13 +286,14 @@ export function FeaturedGallery() {
               variant="outline"
               className="mb-4 sm:mb-6 px-4 sm:px-6 py-2 text-xs sm:text-sm font-light border-rose-200 text-rose-600 animate-fade-in-up"
             >
-              {React.createElement(bouquetSection.badge.icon, {
-                className: "w-3 h-3 sm:w-4 sm:h-4 mr-2 animate-pulse",
-              })}
+              <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-2 animate-pulse" />
               {bouquetSection.badge.text}
             </Badge>
             <h3 className="text-4xl sm:text-5xl md:text-6xl font-extralight text-gray-900 mb-6 sm:mb-8">
-              <span className="block animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <span
+                className="block animate-fade-in-up"
+                style={{ animationDelay: "0.2s" }}
+              >
                 {bouquetSection.title}
               </span>
               <span
@@ -297,15 +335,15 @@ export function FeaturedGallery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  {/* Price Badge */}
-                  {/* <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full shadow-lg animate-fade-in-down">
-                    <span className="text-xs sm:text-sm font-semibold text-gray-800">{bouquet.price}</span>
-                  </div> */}
-
                   {/* Overlay Content - Always visible on mobile */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 transform translate-y-0 sm:translate-y-full sm:group-hover:translate-y-0 transition-transform duration-500">
-                    <h4 className="text-lg sm:text-xl font-light text-white mb-1 animate-fade-in-up">{bouquet.name}</h4>
-                    <p className="text-white/80 text-sm mb-3 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                    <h4 className="text-lg sm:text-xl font-light text-white mb-1 animate-fade-in-up">
+                      {bouquet.name}
+                    </h4>
+                    <p
+                      className="text-white/80 text-sm mb-3 animate-fade-in-up"
+                      style={{ animationDelay: "0.1s" }}
+                    >
                       {bouquet.style}
                     </p>
                     <Button
@@ -325,15 +363,20 @@ export function FeaturedGallery() {
 
         {/* Call to Action - Mobile Enhanced */}
         <div className="text-center mt-16 sm:mt-20">
-          <Button
-            size="lg"
-            className="group relative overflow-hidden bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 hover:from-rose-600 hover:via-purple-600 hover:to-amber-600 text-white px-8 sm:px-12 py-4 text-base sm:text-lg font-light shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none animate-fade-in-up hover:scale-105 animate-gradient-x"
+          <Link
+            href="/gallery"
+            className="group relative px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
           >
-            <span className="relative z-10">{cta.text}</span>
-            <div className="absolute inset-0 bg-white/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-          </Button>
+            <Button
+              size="lg"
+              className="group relative overflow-hidden bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 hover:from-rose-600 hover:via-purple-600 hover:to-amber-600 text-white px-8 sm:px-12 py-4 text-base sm:text-lg font-light shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto max-w-sm sm:max-w-none animate-fade-in-up hover:scale-105 animate-gradient-x"
+            >
+              <span className="relative z-10">{cta.text}</span>
+              <div className="absolute inset-0 bg-white/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }

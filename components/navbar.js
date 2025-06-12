@@ -5,14 +5,15 @@ import Link from "next/link"
 import { Phone, Mail, Clock, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services" },
-  { name: "About", href: "#about" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact", href: "#contact" },
+  { name: "Services", href: "/#services" },
+  { name: "About", href: "/about" }, // Updated to link to the about page
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact", href: "/contact" }, // Updated to link to the contact page
 ]
 
 const SOCIAL_LINKS = [
@@ -145,6 +146,9 @@ export function Navbar() {
               side="right"
               className="w-[350px] sm:w-[400px] bg-gradient-to-br from-white/95 via-rose-50/80 to-purple-50/60 border-l border-rose-100/50 backdrop-blur-2xl"
             >
+              {/* Add DialogTitle for accessibility */}
+              <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
+
               {/* Mobile Header */}
               <div className="flex items-center justify-between mb-8 pt-4">
                 <div className="flex items-center space-x-2 group">

@@ -40,9 +40,9 @@ export function ContactSection() {
           <Badge variant="outline" className="mb-4">
             Get In Touch
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Lets Plan Your Perfect Event</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Plan Your Perfect Event</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to create something amazing? Get in touch with our expert event planners and lets bring your vision
+            Ready to create something amazing? Get in touch with our expert event planners and let's bring your vision
             to life.
           </p>
         </div>
@@ -135,7 +135,7 @@ export function ContactSection() {
                   <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
                   <p className="text-muted-foreground">
-                    Thank you for your inquiry. We will get back to you within 2 hours.
+                    Thank you for your inquiry. We'll get back to you within 2 hours.
                   </p>
                 </div>
               ) : (

@@ -8,38 +8,45 @@ import { Button } from "@/components/ui/button"
 const carouselItems = [
   {
     id: 1,
-    title: "Luxury Wedding Events",
-    subtitle: "Creating Unforgettable Moments",
-    description: "Transform your special day into a magical celebration with our premium wedding planning services.",
-    image: "/images/img1.jpg",
+    title: "Dream Wedding Events",
+    subtitle: "We Plan to Make Your Every Moment Just as a Dream",
+    description:
+      "Complete wedding planning with decoration, beautician services, photography, and catering - creating your perfect day.",
+    image: "/images/img7.jpg",
     cta: "Plan Your Wedding",
+    accent: "rose",
   },
   {
     id: 2,
-    title: "Corporate Events",
-    subtitle: "Professional Excellence",
-    description: "Elevate your business gatherings with our sophisticated corporate event management solutions.",
-    image: "/images/img2.jpg",
-    cta: "Book Corporate Event",
+    title: "Live Music Concerts",
+    subtitle: "Where Words Fail, Music Speaks",
+    description:
+      "Professional live music events with bands, orchestra, choir, and complete sound setup for unforgettable experiences.",
+    image: "/images/img7.jpg",
+    cta: "Book Concert",
+    accent: "purple",
   },
   {
     id: 3,
-    title: "Birthday Celebrations",
-    subtitle: "Make Every Year Special",
-    description: "From intimate gatherings to grand celebrations, we make every birthday unforgettable.",
+    title: "DJ Nights & Parties",
+    subtitle: "Beats That Move Your Soul",
+    description:
+      "Professional DJ services with tested beats, lighting, and sound systems for the ultimate party experience.",
     image: "/images/img7.jpg",
-    cta: "Celebrate With Us",
+    cta: "Book DJ Night",
+    accent: "amber",
   },
 ]
-
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     setIsLoaded(true)
+    setIsMounted(true)
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
     checkMobile()
     window.addEventListener("resize", checkMobile)
@@ -65,19 +72,21 @@ export function HeroCarousel() {
   return (
     <section className="relative h-[90vh] overflow-hidden">
       {/* Floating Particles using tw-animate-css */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(isMobile ? 8 : 15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-rose-400 to-purple-500 rounded-full opacity-20 animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-            }}
-          />
-        ))}
-      </div>
+      {isMounted && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(isMobile ? 8 : 15)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-gradient-to-r from-rose-400 to-purple-500 rounded-full opacity-20 animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       {carouselItems.map((item, index) => (
         <div
