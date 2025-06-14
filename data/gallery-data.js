@@ -65,7 +65,7 @@ export const galleryData = {
       id: 3,
       title: "Venue Transformations",
       category: "Design",
-      image: "/images/stage1.jpg",
+      image: "/images/stage1.JPG",
       description: "Crafted with precision and passion",
     },
   ],
