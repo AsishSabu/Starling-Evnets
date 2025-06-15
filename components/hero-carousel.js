@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const carouselItems = [
   {
@@ -36,38 +36,48 @@ const carouselItems = [
     cta: "Book DJ Night",
     accent: "amber",
   },
-]
+];
 
 export function HeroCarousel() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    setIsLoaded(true)
-    setIsMounted(true)
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
+    setIsLoaded(true);
+    setIsMounted(true);
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselItems.length)
-    }, 6000)
+    startAutoSlide();
 
     return () => {
-      clearInterval(timer)
-      window.removeEventListener("resize", checkMobile)
-    }
-  }, [])
+      clearInterval(intervalRef.current);
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  const startAutoSlide = () => {
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+    }, 10000);
+  };
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselItems.length)
-  }
+    setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+    startAutoSlide();
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselItems.length) % carouselItems.length)
-  }
+    setCurrentSlide(
+      (prev) => (prev - 1 + carouselItems.length) % carouselItems.length
+    );
+    startAutoSlide();
+  };
 
   return (
     <section className="relative h-[90vh] overflow-hidden">
@@ -94,9 +104,9 @@ export function HeroCarousel() {
           className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
             index === currentSlide
               ? "translate-x-0 opacity-100 scale-100"
-              : index < currentSlide
-                ? "-translate-x-full opacity-0 scale-110"
-                : "translate-x-full opacity-0 scale-90"
+              : index < currentSlide && currentSlide !== 0
+              ? "-translate-x-full opacity-0 scale-110"
+              : "translate-x-full opacity-0 scale-90"
           }`}
         >
           <div className="relative h-full">
@@ -114,18 +124,24 @@ export function HeroCarousel() {
               <div className="w-full max-w-6xl mx-auto">
                 <div
                   className={`text-center text-white transition-all duration-1000 ease-out ${
-                    index === currentSlide && isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                    index === currentSlide && isLoaded
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-10 opacity-0"
                   }`}
                 >
                   {/* Professional Badge with tw-animate-css */}
                   <div
                     className={`inline-flex items-center space-x-2 bg-white/15 backdrop-blur-xl border border-white/25 rounded-full px-4 py-2 sm:px-6 sm:py-3 mb-4 sm:mb-6 transition-all duration-700 ease-out ${
-                      index === currentSlide ? "scale-100 opacity-100 animate-fade-in-up" : "scale-0 opacity-0"
+                      index === currentSlide
+                        ? "scale-100 opacity-100 animate-fade-in-up"
+                        : "scale-0 opacity-0"
                     }`}
                     style={{ animationDelay: "0.5s" }}
                   >
                     <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 animate-pulse" />
-                    <span className="text-xs sm:text-sm font-medium tracking-wide">{item.subtitle}</span>
+                    <span className="text-xs sm:text-sm font-medium tracking-wide">
+                      {item.subtitle}
+                    </span>
                   </div>
 
                   {/* Enhanced Title with Professional Mobile Typography */}
@@ -147,8 +163,8 @@ export function HeroCarousel() {
                             i === 0
                               ? "text-white"
                               : i === 1
-                                ? `text-${item.accent}-300 sm:text-${item.accent}-400`
-                                : `text-${item.accent}-200 sm:text-${item.accent}-300`
+                              ? `text-${item.accent}-300 sm:text-${item.accent}-400`
+                              : `text-${item.accent}-200 sm:text-${item.accent}-300`
                           } hover:scale-105 transition-transform duration-500 cursor-default`}
                         >
                           {word}
@@ -222,7 +238,9 @@ export function HeroCarousel() {
           <button
             key={index}
             className={`relative transition-all duration-500 ${
-              index === currentSlide ? "w-8 sm:w-12 h-2 sm:h-3" : "w-2 sm:w-3 h-2 sm:h-3"
+              index === currentSlide
+                ? "w-8 sm:w-12 h-2 sm:h-3"
+                : "w-2 sm:w-3 h-2 sm:h-3"
             }`}
             onClick={() => setCurrentSlide(index)}
           >
@@ -233,16 +251,20 @@ export function HeroCarousel() {
                   : "bg-white/50 hover:bg-white/70"
               }`}
             />
-            {index === currentSlide && <div className="absolute inset-0 bg-white/30 rounded-full animate-pulse" />}
+            {index === currentSlide && (
+              <div className="absolute inset-0 bg-white/30 rounded-full animate-pulse" />
+            )}
           </button>
         ))}
       </div>
 
       {/* Scroll Indicator - Hidden on Mobile */}
       <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 hidden sm:flex flex-col items-center space-y-2 text-white/70 animate-fade-in">
-        <span className="text-xs font-medium rotate-90 origin-center tracking-wider">SCROLL</span>
+        <span className="text-xs font-medium rotate-90 origin-center tracking-wider">
+          SCROLL
+        </span>
         <div className="w-px h-8 sm:h-12 bg-gradient-to-b from-white/50 to-transparent animate-pulse" />
       </div>
     </section>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, Crown, Sparkles, Heart } from "lucide-react";
+import { Crown, Sparkles, Heart } from "lucide-react";
 import { galleryData } from "@/data/gallery-data";
 import Link from "next/link";
 
@@ -16,8 +16,8 @@ export function FeaturedGallery() {
     subtitle: "Decoration",
     description:
       "Transform ordinary spaces into extraordinary experiences. Our bespoke decoration services blend elegance with innovation, creating atmospheres that captivate and inspire.",
-    buttonText: "DISCOVER MORE",
-    rating: 5,
+    // buttonText: "DISCOVER MORE",
+    // rating: 5,
     gradient: "from-rose-400 to-purple-500",
   };
 
@@ -27,21 +27,21 @@ export function FeaturedGallery() {
     subtitle: "Events",
     description:
       "Every dream deserves a perfect execution. We collaborate intimately with our clients to bring their unique visions to life, crafting celebrations that reflect their personal story and style.",
-    buttonText: "VIEW DETAILS",
-    rating: 5,
+    // buttonText: "VIEW DETAILS",
+    // rating: 5,
     gradient: "from-purple-400 to-amber-500",
   };
 
   // Helper function to render stars
-  const renderStars = (count) => {
-    return Array.from({ length: count }).map((_, index) => (
-      <Star
-        key={index}
-        className="w-3 h-3 sm:w-4 sm:h-4 fill-amber-400 text-amber-400 animate-pulse"
-        style={{ animationDelay: `${index * 0.1}s` }}
-      />
-    ));
-  };
+  // const renderStars = (count) => {
+  //   return Array.from({ length: count }).map((_, index) => (
+  //     <Star
+  //       key={index}
+  //       className="w-3 h-3 sm:w-4 sm:h-4 fill-amber-400 text-amber-400 animate-pulse"
+  //       style={{ animationDelay: `${index * 0.1}s` }}
+  //     />
+  //   ));
+  // };
 
   return (
     <section className="relative py-8 sm:py-16 lg:py-20 bg-gradient-to-b from-slate-50 via-white to-rose-50/30 overflow-hidden">
@@ -137,7 +137,7 @@ export function FeaturedGallery() {
               >
                 {leftFeature.description}
               </p>
-              <div
+              {/* <div
                 className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4 animate-fade-in-up"
                 style={{ animationDelay: "0.6s" }}
               >
@@ -153,7 +153,7 @@ export function FeaturedGallery() {
                 <div className="flex space-x-1 justify-center sm:justify-start">
                   {renderStars(leftFeature.rating)}
                 </div>
-              </div>
+              </div> */}
             </div>
           )}
 
@@ -216,7 +216,7 @@ export function FeaturedGallery() {
               >
                 {rightFeature.description}
               </p>
-              <div
+              {/* <div
                 className="flex flex-col sm:flex-row sm:items-center lg:justify-end space-y-4 sm:space-y-0 sm:space-x-4 pt-4 animate-fade-in-up"
                 style={{ animationDelay: "0.6s" }}
               >
@@ -232,7 +232,7 @@ export function FeaturedGallery() {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-amber-50 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                 </Button>
-              </div>
+              </div> */}
             </div>
           )}
         </div>

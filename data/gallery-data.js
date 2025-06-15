@@ -73,12 +73,11 @@ export const galleryData = {
   bouquetSection: {
     badge: {
       text: "Signature Collection",
-      icon: Heart,
     },
-    title: "Bridal",
-    subtitle: "Bouquets",
+    title: "Wedding",
+    subtitle: "Collections",
     description:
-      "Each bouquet is a work of art, meticulously crafted to complement your unique style and the essence of your special day.",
+      "A handpicked showcase of our finest wedding photography — capturing love, tradition, and celebration in timeless frames.",
   },
 
   bouquets: [
@@ -86,28 +85,24 @@ export const galleryData = {
       id: 1,
       name: "Classic Romance",
       style: "Timeless Elegance",
-      price: "₹3,500",
       image: "/images/wed1.jpg",
     },
     {
       id: 2,
       name: "Garden Dreams",
       style: "Natural Beauty",
-      price: "₹4,200",
       image: "/images/wed5.jpg",
     },
     {
       id: 3,
       name: "Modern Luxe",
       style: "Contemporary Chic",
-      price: "₹5,100",
       image: "/images/wed3.jpg",
     },
     {
       id: 4,
       name: "Vintage Charm",
       style: "Nostalgic Grace",
-      price: "₹4,500",
       image: "/images/wed4.jpg",
     },
   ],
@@ -274,3 +269,66 @@ export const galleryData = {
     },
   ],
 };
+
+export const galleryItems = [
+  {
+    id: "w1",
+    title: "Wedding Planning",
+    image: "/images/img1.jpg",
+  },
+  {
+    id: "w2",
+    title: "Grand Entries",
+    image: "/images/img2.jpg",
+  },
+  {
+    id: "w3",
+    title: "Bridal Bouquets",
+    image: "/images/img3.jpg",
+  },
+  {
+    id: "w4",
+    title: "Destination Weddings",
+    image: "/images/img4.jpg",
+  },
+  {
+    id: "d1",
+    title: "Stage Decoration",
+    image: "/images/img5.jpg",
+  },
+  {
+    id: "d2",
+    title: "Venue Styling",
+    image: "/images/stage1.jpg",
+  },
+  {
+    id: "d3",
+    title: "Car Decoration",
+    image: "/images/stage2.jpg",
+  },
+  {
+    id: "m1",
+    title: "Light & Sound",
+    image: "/images/stage3.jpg",
+  },
+  {
+    id: "c1",
+    title: "Event Management",
+    image: "/images/stage4.jpg",
+  },
+  {
+    id: "c2",
+    title: "Venue & Transport",
+    image: "/images/stage5.jpg",
+  },
+  {
+    id: "f1",
+    title: "Experience Planning",
+    image: "/images/stage6.jpg",
+  },
+    {
+    id: "f1",
+    title: "Experience Planning",
+    image: "/images/stage7.jpg",
+  },
+];
