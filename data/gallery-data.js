@@ -91,7 +91,7 @@ export const galleryData = {
       id: 2,
       name: "Garden Dreams",
       style: "Natural Beauty",
-      image: "/images/wed5.jpg",
+      image: "/images/wed5.JPG",
     },
     {
       id: 3,
