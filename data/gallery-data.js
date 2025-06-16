@@ -314,7 +314,7 @@ export const galleryItems = [
   {
     id: "c1",
     title: "Event Management",
-    // image: "/images/stage4.jpg",
+    image: "/images/stage4.jpg",
   },
   {
     id: "c2",
