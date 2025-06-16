@@ -138,7 +138,7 @@ export const servicesData = {
       title: "College Functions",
       description:
         "Vibrant and well-organized college events including fests, cultural programs, and graduation ceremonies. We bring energy and professionalism to campus events.",
-      image: "/images/collegeFunction.jpg",
+      image: "/images/collegefunction.jpg",
       features: [
         "Stage Setup",
         "Sound & Lighting",
