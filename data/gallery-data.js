@@ -65,7 +65,7 @@ export const galleryData = {
       id: 3,
       title: "Venue Transformations",
       category: "Design",
-      image: "/images/stage1.JPG",
+      image: "/images/stage1.jpg",
       description: "Crafted with precision and passion",
     },
   ],
@@ -112,7 +112,7 @@ export const galleryData = {
   },
 
   categories: [
-    { id: "weddings", name: "Weddings" },
+    { id: "weddings", name: "Wedding" },
     { id: "corporate", name: "Corporate Events" },
     { id: "decor", name: "Decoration" },
     { id: "entertainment", name: "Entertainment" },
