@@ -42,7 +42,7 @@ export const galleryData = {
     alt: "Elegant bride with bouquet",
     badge: {
       text: "Premium",
-      icon: Heart,
+
     },
   },
 
