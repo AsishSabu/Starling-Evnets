@@ -12,7 +12,7 @@ const carouselItems = [
     subtitle: "We Plan to Make Your Every Moment Just as a Dream",
     description:
       "Complete wedding planning with decoration, beautician services, photography, and catering - creating your perfect day.",
-    image: "/images/img7.jpg",
+    image: "/images/hero1.jpg",
     cta: "Plan Your Wedding",
     accent: "rose",
   },
@@ -22,7 +22,7 @@ const carouselItems = [
     subtitle: "Where Words Fail, Music Speaks",
     description:
       "Professional live music events with bands, orchestra, choir, and complete sound setup for unforgettable experiences.",
-    image: "/images/img7.jpg",
+    image: "/images/hero3.jpg",
     cta: "Book Concert",
     accent: "purple",
   },
@@ -32,7 +32,7 @@ const carouselItems = [
     subtitle: "Beats That Move Your Soul",
     description:
       "Professional DJ services with tested beats, lighting, and sound systems for the ultimate party experience.",
-    image: "/images/img7.jpg",
+    image: "/images/hero2.jpg",
     cta: "Book DJ Night",
     accent: "amber",
   },

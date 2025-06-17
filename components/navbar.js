@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useCallback } from "react"
-import Link from "next/link"
-import { Phone, Mail, Clock, Sparkles } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { DialogTitle } from "@/components/ui/dialog"
-import Image from "next/image"
+import { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
+import { Phone, Mail, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DialogTitle } from "@/components/ui/dialog";
+import Image from "next/image";
 
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
@@ -14,44 +14,44 @@ const NAV_ITEMS = [
   { name: "About", href: "/about" }, // Updated to link to the about page
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/#contact" }, // Updated to link to the contact page
-]
+];
 
 const SOCIAL_LINKS = [
   { name: "Facebook", icon: "📘", color: "hover:bg-blue-100" },
   { name: "Instagram", icon: "📷", color: "hover:bg-pink-100" },
   { name: "Twitter", icon: "🐦", color: "hover:bg-sky-100" },
   { name: "LinkedIn", icon: "💼", color: "hover:bg-indigo-100" },
-]
+];
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [mounted, setMounted] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const handleScroll = useCallback(() => {
-    setScrolled(window.scrollY > 50)
-  }, [])
+    setScrolled(window.scrollY > 50);
+  }, []);
 
   const closeMenu = useCallback(() => {
-    setIsOpen(false)
-  }, [])
+    setIsOpen(false);
+  }, []);
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
 
     if (typeof window !== "undefined") {
-      handleScroll()
-      window.addEventListener("scroll", handleScroll, { passive: true })
-      return () => window.removeEventListener("scroll", handleScroll)
+      handleScroll();
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleScroll);
     }
-  }, [handleScroll])
+  }, [handleScroll]);
 
   // Stable class names
   const navClassName = `fixed top-0 z-50 w-full transition-all duration-500 ${
     mounted && scrolled
       ? "bg-white/80 backdrop-blur-xl border-b border-rose-100/50 shadow-lg shadow-rose-100/20"
       : "bg-transparent"
-  }`
+  }`;
 
   return (
     <nav className={navClassName}>
@@ -150,7 +150,7 @@ export function Navbar() {
               <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
 
               {/* Mobile Header */}
-              <div className="flex items-center justify-between mb-8 pt-4">
+              <div className="flex items-center justify-between mb-8 ps-3 pt-4">
                 <div className="flex items-center space-x-2 group">
                   <Image
                     src="/images/logo.png"
@@ -167,15 +167,15 @@ export function Navbar() {
               </div>
 
               {/* Mobile Navigation */}
-              <div className="space-y-2 mb-8">
+              <div className="space-y-2 mb-4">
                 {NAV_ITEMS.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="group flex items-center space-x-4 px-4 py-4 rounded-2xl text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:via-purple-500 hover:to-amber-500 transition-all duration-500 backdrop-blur-sm hover:scale-105 hover:shadow-lg"
+                    className="group mx-6 flex items-center space-x-4 px-4 py-4 rounded-2xl text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:via-purple-500 hover:to-amber-500 transition-all duration-500 backdrop-blur-sm hover:scale-105 hover:shadow-lg"
                     onClick={closeMenu}
                   >
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-rose-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-150" />
+                    <div className=" w-2 h-2 rounded-full bg-gradient-to-r from-rose-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-150" />
                     <span className="text-lg font-medium group-hover:translate-x-1 transition-transform duration-300">
                       {item.name}
                     </span>
@@ -185,31 +185,13 @@ export function Navbar() {
               </div>
 
               {/* Divider */}
-              <div className="relative mb-8">
+              <div className="relative mb-4">
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-rose-300 to-transparent" />
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-gradient-to-r from-rose-400 to-purple-500 rounded-full animate-pulse" />
               </div>
 
-              {/* Contact Buttons */}
-              <div className="space-y-4 mb-8">
-                <Button
-                  variant="outline"
-                  className="w-full group relative overflow-hidden border-2 border-rose-200 hover:border-rose-400 text-gray-700 hover:text-white py-4 transition-all duration-500 hover:scale-105 hover:shadow-xl"
-                >
-                  <Phone className="h-5 w-5 mr-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
-                  <span className="relative z-10 font-medium">Call Us Now</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-purple-500 translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl" />
-                </Button>
-                <Button className="w-full group relative overflow-hidden bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 hover:from-rose-600 hover:via-purple-600 hover:to-amber-600 text-white py-4 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
-                  <Mail className="h-5 w-5 mr-3 group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300" />
-                  <span className="relative z-10 font-medium">Get Free Quote</span>
-                  <div className="absolute inset-0 bg-white/30 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                </Button>
-              </div>
-
               {/* Contact Info */}
-              <div className="space-y-4 mb-8">
+              <div className="space-y-2 mb-4 mx-6">
                 <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-5 border border-white/50 hover:bg-white/80 transition-all duration-500 hover:scale-105 hover:shadow-xl group">
                   <h4 className="font-semibold text-gray-800 mb-3 flex items-center group-hover:text-rose-600 transition-colors duration-300">
                     <Phone className="h-5 w-5 mr-3 text-rose-500 group-hover:scale-110 transition-transform duration-300" />
@@ -222,29 +204,15 @@ export function Navbar() {
                     <p className="hover:text-purple-600 transition-colors duration-300 cursor-pointer">
                       ✉️ starlingeventscmt@gmail.com
                     </p>
-                    <p className="hover:text-amber-600 transition-colors duration-300 cursor-pointer">
-                      📍 123 Event Street, Downtown
-                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Business Hours */}
-              <div className="bg-gradient-to-br from-rose-50/80 to-purple-50/80 backdrop-blur-xl rounded-2xl p-5 border border-rose-100/50 mb-8 hover:scale-105 transition-all duration-500 hover:shadow-xl">
-                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
-                  <Clock className="h-5 w-5 mr-3 text-purple-500 animate-pulse" />
-                  Business Hours
-                </h4>
-                <div className="space-y-1 text-sm text-gray-600">
-                  <p className="hover:text-purple-600 transition-colors duration-300">Mon - Fri: 9:00 AM - 6:00 PM</p>
-                  <p className="hover:text-purple-600 transition-colors duration-300">Saturday: 10:00 AM - 4:00 PM</p>
-                  <p className="hover:text-purple-600 transition-colors duration-300">Sunday: Closed</p>
-                </div>
-              </div>
-
               {/* Social Links */}
-              <div className="pt-6 border-t border-rose-100/50">
-                <p className="text-sm text-gray-600 mb-4 text-center font-medium">Follow us on social media</p>
+              <div className="pt-2 border-t border-rose-100/50">
+                <p className="text-sm text-gray-600 mb-4 text-center font-medium">
+                  Follow us on social media
+                </p>
                 <div className="flex justify-center space-x-4">
                   {SOCIAL_LINKS.map((social) => (
                     <button
@@ -262,5 +230,5 @@ export function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

@@ -255,24 +255,6 @@ export function FeaturedGallery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  {/* Overlay Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 transform translate-y-0 sm:translate-y-full sm:group-hover:translate-y-0 transition-transform duration-500">
-                    <Badge
-                      variant="secondary"
-                      className="mb-2 bg-white/90 sm:bg-white/20 text-black sm:text-white border-white/30 text-xs sm:text-sm animate-fade-in"
-                    >
-                      {item.category}
-                    </Badge>
-                    <h4 className="text-lg sm:text-xl font-light text-black sm:text-white mb-2 animate-fade-in-up">
-                      {item.title}
-                    </h4>
-                    <p
-                      className="text-gray-700 sm:text-white/80 text-sm animate-fade-in-up"
-                      style={{ animationDelay: "0.1s" }}
-                    >
-                      {item.description}
-                    </p>
-                  </div>
                 </div>
               </div>
             ))}
@@ -335,26 +317,7 @@ export function FeaturedGallery() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                  {/* Overlay Content - Always visible on mobile */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 transform translate-y-0 sm:translate-y-full sm:group-hover:translate-y-0 transition-transform duration-500">
-                    <h4 className="text-lg sm:text-xl font-light text-white mb-1 animate-fade-in-up">
-                      {bouquet.name}
-                    </h4>
-                    <p
-                      className="text-white/80 text-sm mb-3 animate-fade-in-up"
-                      style={{ animationDelay: "0.1s" }}
-                    >
-                      {bouquet.style}
-                    </p>
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      className="bg-white/90 sm:bg-white/20 hover:bg-white sm:hover:bg-white/30 text-black sm:text-white border-white/30 text-xs sm:text-sm animate-fade-in-up hover:scale-105 transition-all duration-300"
-                      style={{ animationDelay: "0.2s" }}
-                    >
-                      View Details
-                    </Button>
-                  </div>
+
                 </div>
               </div>
             ))}
