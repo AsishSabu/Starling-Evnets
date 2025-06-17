@@ -43,10 +43,10 @@ export const servicesData = {
       title: "Beautician Services",
       description:
         "Professional makeup and hair styling for brides, grooms, and the entire wedding party. Our beauticians use premium products and stay updated with the latest trends.",
-      image: "/images/img6.jpg",
+      image: "/images/beutician.jpg",
       features: ["Bridal Makeup", "Hair Styling", "Mehendi", "Group Packages"],
       category: "weddings",
-      featured: false,
+      featured: true,
     },
     {
       id: 4,
@@ -183,21 +183,7 @@ export const servicesData = {
       category: "entertainment",
       featured: false,
     },
-    {
-      id: 14,
-      title: "House Warming",
-      description:
-        "Traditional and meaningful house warming ceremonies with all necessary arrangements. We help you welcome prosperity and happiness into your new home.",
-      image: "/images/housewarming.jpg",
-      features: [
-        "Traditional Rituals",
-        "Decoration",
-        "Catering",
-        "Guest Management",
-      ],
-      category: "social",
-      featured: true,
-    },
+
   ],
 };
 export const mainServices = [
