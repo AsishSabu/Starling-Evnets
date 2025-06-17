@@ -12,7 +12,7 @@ const carouselItems = [
     subtitle: "We Plan to Make Your Every Moment Just as a Dream",
     description:
       "Complete wedding planning with decoration, beautician services, photography, and catering - creating your perfect day.",
-    image: "/images/hero1.jpg",
+    image: "/images/hero4.jpg",
     cta: "Plan Your Wedding",
     accent: "rose",
   },
