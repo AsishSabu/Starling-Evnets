@@ -55,12 +55,12 @@ export function AboutStory() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
+            <div className="aspect-[4/5] overflow-hidden rounded-2xl shadow-xl p-0">
               <Image
-                src="/placeholder.svg?height=800&width=600&text=Our+Story"
+                src="/images/about1.jpg"
                 alt="Starling Events journey"
                 fill
-                className="object-cover"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>

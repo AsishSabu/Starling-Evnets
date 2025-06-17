@@ -115,7 +115,7 @@ export function ContactSection() {
 
                   <div className="space-y-4">
                     <a href="tel:+919400632524">
-                      <Button className="w-full" size="lg">
+                      <Button className="w-full bg-gray-600" size="lg">
                         <Phone className="h-4 w-4 mr-2" />
                         Call Now: +919400632524
                       </Button>
@@ -161,7 +161,7 @@ export function ContactSection() {
                 rel="noopener noreferrer"
                 className="absolute top-1 right-2"
               >
-                <Button size="sm" className="w-full mt-3">
+                <Button size="sm" className="w-full mt-3 bg-gray-600">
                   Get Directions
                 </Button>
               </a>

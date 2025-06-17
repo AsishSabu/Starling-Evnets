@@ -196,7 +196,7 @@ export function HeroCarousel() {
                     }`}
                     style={{ animationDelay: "1.3s" }}
                   >
-                    <Button
+                    {/* <Button
                       size="lg"
                       className="group relative overflow-hidden bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 hover:from-rose-600 hover:via-purple-600 hover:to-amber-600 text-white px-8 sm:px-10 py-4 sm:py-6 text-base sm:text-lg font-medium shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 w-full sm:w-auto min-w-[200px] sm:min-w-[240px] animate-gradient-x"
                     >
@@ -205,7 +205,7 @@ export function HeroCarousel() {
                         View Gallery
                       </span>
                       <div className="absolute inset-0 bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full"></div>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </div>

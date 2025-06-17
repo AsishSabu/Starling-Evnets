@@ -55,7 +55,7 @@ export function AboutHero() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="/placeholder.svg?height=800&width=600&text=About+Us+Hero"
+                src="/images/about2.jpg"
                 alt="Starling Events team planning an event"
                 fill
                 className="object-cover"

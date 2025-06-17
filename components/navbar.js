@@ -95,15 +95,18 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="outline"
-              size="sm"
-              className="group relative overflow-hidden border-2 border-rose-200 hover:border-rose-400 hover:scale-105 transition-all duration-300"
-            >
-              <Phone className="h-4 w-4 mr-2 group-hover:animate-pulse" />
-              <span className="relative z-10">Call Us</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-50 to-purple-50 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </Button>
+            <a href="tel:+919400632524">
+              <Button
+                variant="outline"
+                size="sm"
+                className="group relative overflow-hidden border-2 border-rose-200 hover:border-rose-400 hover:scale-105 transition-all duration-300"
+              >
+                <Phone className="h-4 w-4 mr-2 group-hover:animate-pulse" />
+                <span className="relative z-10">Call Us</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-rose-50 to-purple-50 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              </Button>
+            </a>
+
             <Button
               size="sm"
               className="group relative overflow-hidden bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 hover:from-rose-600 hover:via-purple-600 hover:to-amber-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"

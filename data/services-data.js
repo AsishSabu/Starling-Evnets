@@ -163,7 +163,7 @@ export const servicesData = {
       title: "Live Music",
       description:
         "Professional live music performances to elevate your event. From classical to contemporary, we provide talented musicians for any occasion.",
-      image: "/images/livemusic.avif",
+      image: "/images/livemusic.jpg",
       features: ["Bands", "Solo Artists", "Instrumental", "Vocal Performances"],
       category: "entertainment",
       featured: true,
