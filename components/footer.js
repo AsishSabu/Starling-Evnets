@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  Calendar,
   Facebook,
   Twitter,
   Instagram,
@@ -11,6 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -20,7 +20,17 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Calendar className="h-8 w-8 text-primary" />
+              <div className="relative">
+                <Image
+                  src="/images/logo2.png"
+                  alt="Starling Events Logo"
+                  width={40}
+                  height={40}
+                  className="group-hover:rotate-12 transition-transform duration-500"
+                  priority
+                />
+                <div className="absolute -inset-2 bg-gradient-to-r from-rose-400/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+              </div>
               <span className="text-2xl font-bold">StarlingEvents</span>
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed">

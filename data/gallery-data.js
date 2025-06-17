@@ -1,4 +1,4 @@
-import { Sparkles, Heart } from "lucide-react";
+import { Sparkles} from "lucide-react";
 
 export const galleryData = {
   header: {

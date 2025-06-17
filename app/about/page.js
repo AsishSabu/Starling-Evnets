@@ -3,7 +3,6 @@ import { Footer } from "@/components/footer"
 import { AboutHero } from "@/components/about-hero"
 import { AboutStory } from "@/components/about-story"
 import { AboutValues } from "@/components/about-values"
-import { AboutStats } from "@/components/about-stats"
 
 export const metadata = {
   title: "About Us | Starling Events",
@@ -18,7 +17,6 @@ export default function AboutPage() {
       <main>
         <AboutHero />
         <AboutStory />
-        <AboutStats />
         <AboutValues />
       </main>
       <Footer />

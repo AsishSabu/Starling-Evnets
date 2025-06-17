@@ -66,14 +66,14 @@ export function AboutHero() {
             {/* Floating elements */}
             <div className="absolute -top-6 -right-6 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-xl">
               <div className="text-center">
-                <div className="text-2xl font-bold text-rose-600">500+</div>
+                <div className="text-2xl font-bold text-rose-600">100+</div>
                 <div className="text-sm text-gray-600">Happy Clients</div>
               </div>
             </div>
 
             <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-xl">
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">5+</div>
+                <div className="text-2xl font-bold text-purple-600">3+</div>
                 <div className="text-sm text-gray-600">Years Experience</div>
               </div>
             </div>
