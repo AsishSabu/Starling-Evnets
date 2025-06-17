@@ -109,7 +109,14 @@ export function Navbar() {
               className="group relative overflow-hidden bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 hover:from-rose-600 hover:via-purple-600 hover:to-amber-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Mail className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-              <span className="relative z-10">Get Quote</span>
+              <a
+                href="https://www.instagram.com/starling_events_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <span className="relative z-10">Instagram</span>
+              </a>
               <div className="absolute inset-0 bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-300 rounded-full" />
             </Button>
           </div>
