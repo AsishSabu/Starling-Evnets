@@ -168,17 +168,17 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                <MapPin className="h-4 w-4 text-white flex-shrink-0" />
                 <span className="text-slate-300">
                   Starling Events, Cumbummettu
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
+                <Phone className="h-4 w-4 text-white flex-shrink-0" />
                 <span className="text-slate-300">+919400632524</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
+                <Mail className="h-4 w-4 text-white flex-shrink-0" />
                 <span className="text-slate-300">
                   starlingeventscmt@gmail.com
                 </span>

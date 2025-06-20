@@ -9,7 +9,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-b from-muted/20 to-background"
+      className="py-10 bg-gradient-to-b from-muted/20 to-background"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">

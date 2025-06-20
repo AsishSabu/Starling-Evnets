@@ -44,7 +44,7 @@ export function FeaturedGallery() {
   // };
 
   return (
-    <section className="relative py-8 sm:py-16 lg:py-20 bg-gradient-to-b from-slate-50 via-white to-rose-50/30 overflow-hidden">
+    <section className="relative py-4 sm:py-8 lg:py-10 bg-gradient-to-b from-slate-50 via-white to-rose-50/30 overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 bg-rose-200 rounded-full blur-3xl animate-float"></div>

@@ -70,7 +70,7 @@ export function Navbar() {
               />
               <div className="absolute -inset-2 bg-gradient-to-r from-rose-400/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary via-purple-600 to-amber-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+            <span className="text-2xl font-bold bg-gradient-to-r from-primary via-purple-600 to-amber-500 bg-clip-text text-black group-hover:scale-105 transition-transform duration-300">
               Starling Events
             </span>
             <Sparkles className="h-4 w-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:rotate-180" />
