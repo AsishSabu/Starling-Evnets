@@ -11,9 +11,9 @@ import Image from "next/image";
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/#services" },
-  { name: "About", href: "/about" }, // Updated to link to the about page
+  { name: "About", href: "/about" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/#contact" }, // Updated to link to the contact page
+  { name: "Contact", href: "/#contact" },
 ];
 
 const SOCIAL_LINKS = [
@@ -38,7 +38,6 @@ export function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-
     if (typeof window !== "undefined") {
       handleScroll();
       window.addEventListener("scroll", handleScroll, { passive: true });
@@ -46,7 +45,6 @@ export function Navbar() {
     }
   }, [handleScroll]);
 
-  // Stable class names
   const navClassName = `fixed top-0 z-50 w-full transition-all duration-500 ${
     mounted && scrolled
       ? "bg-white/80 backdrop-blur-xl border-b border-rose-100/50 shadow-lg shadow-rose-100/20"
@@ -57,20 +55,38 @@ export function Navbar() {
     <nav className={navClassName}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+          {/* Logo & Heading */}
           <Link href="/" className="group flex items-center space-x-3">
             <div className="relative">
-              <Image
-                src="/images/logo.png"
-                alt="Starling Events Logo"
-                width={40}
-                height={40}
-                className="group-hover:rotate-12 transition-transform duration-500"
-                priority
-              />
+              {mounted && scrolled ? (
+                <Image
+                  src="/images/logo.png"
+                  alt="Starling Events Logo"
+                  width={40}
+                  height={40}
+                  className="group-hover:rotate-12 transition-transform duration-500"
+                  priority
+                />
+              ) : (
+                <Image
+                  src="/images/logo2.png"
+                  alt="Starling Events Logo"
+                  width={40}
+                  height={40}
+                  className="group-hover:rotate-12 transition-transform duration-500"
+                  priority
+                />
+              )}
+
               <div className="absolute -inset-2 bg-gradient-to-r from-rose-400/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary via-purple-600 to-amber-500 bg-clip-text text-black group-hover:scale-105 transition-transform duration-300">
+            <span
+              className={`text-2xl font-bold transition-all duration-500 group-hover:scale-105 ${
+                mounted && scrolled
+                  ? "text-black"
+                  : "bg-gradient-to-r from-primary via-purple-600 to-amber-500 bg-clip-text text-white"
+              }`}
+            >
               Starling Events
             </span>
             <Sparkles className="h-4 w-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:rotate-180" />
@@ -106,7 +122,6 @@ export function Navbar() {
                 <div className="absolute inset-0 bg-gradient-to-r from-rose-50 to-purple-50 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </Button>
             </a>
-
             <Button
               size="sm"
               className="group relative overflow-hidden bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 hover:from-rose-600 hover:via-purple-600 hover:to-amber-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -117,7 +132,6 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {" "}
                 <span className="relative z-10">Instagram</span>
               </a>
               <div className="absolute inset-0 bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-300 rounded-full" />
@@ -156,10 +170,7 @@ export function Navbar() {
               side="right"
               className="w-[350px] sm:w-[400px] bg-gradient-to-br from-white/95 via-rose-50/80 to-purple-50/60 border-l border-rose-100/50 backdrop-blur-2xl"
             >
-              {/* Add DialogTitle for accessibility */}
               <DialogTitle className="sr-only">Navigation Menu</DialogTitle>
-
-              {/* Mobile Header */}
               <div className="flex items-center justify-between mb-8 ps-3 pt-4">
                 <div className="flex items-center space-x-2 group">
                   <Image
@@ -169,14 +180,12 @@ export function Navbar() {
                     height={24}
                     className="group-hover:rotate-12 transition-transform duration-500"
                   />
-                  <span className="text-xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                  <span className="text-xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-black">
                     Starling Events
                   </span>
                   <div className="w-2 h-2 bg-gradient-to-r from-rose-400 to-purple-500 rounded-full animate-pulse" />
                 </div>
               </div>
-
-              {/* Mobile Navigation */}
               <div className="space-y-2 mb-4">
                 {NAV_ITEMS.map((item) => (
                   <Link
@@ -193,14 +202,10 @@ export function Navbar() {
                   </Link>
                 ))}
               </div>
-
-              {/* Divider */}
               <div className="relative mb-4">
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-rose-300 to-transparent" />
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-gradient-to-r from-rose-400 to-purple-500 rounded-full animate-pulse" />
               </div>
-
-              {/* Contact Info */}
               <div className="space-y-2 mb-4 mx-6">
                 <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-5 border border-white/50 hover:bg-white/80 transition-all duration-500 hover:scale-105 hover:shadow-xl group">
                   <h4 className="font-semibold text-gray-800 mb-3 flex items-center group-hover:text-rose-600 transition-colors duration-300">
@@ -217,8 +222,6 @@ export function Navbar() {
                   </div>
                 </div>
               </div>
-
-              {/* Social Links */}
               <div className="pt-2 border-t border-rose-100/50">
                 <p className="text-sm text-gray-600 mb-4 text-center font-medium">
                   Follow us on social media
