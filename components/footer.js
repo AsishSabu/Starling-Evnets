@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Instagram, Heart, Sparkles, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import Image from "next/image"
+import Link from "next/link";
+import { Instagram, Heart, Sparkles, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -45,13 +45,17 @@ export function Footer() {
                 <span className="text-3xl font-light bg-gradient-to-r from-rose-300/80 via-purple-300/80 to-amber-300/80 bg-clip-text text-white">
                   Starling
                 </span>
-                <span className="text-3xl font-light text-white/90"> Events</span>
+                <span className="text-3xl font-light text-white/90">
+                  {" "}
+                  Events
+                </span>
               </div>
             </Link>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-md font-light">
-              Creating unforgettable experiences through exceptional event planning and management. Where dreams meet
-              reality, and every moment becomes magical.
+              Creating unforgettable experiences through exceptional event
+              planning and management. Where dreams meet reality, and every
+              moment becomes magical.
             </p>
 
             {/* Professional Instagram Button */}
@@ -59,7 +63,12 @@ export function Footer() {
               <Button
                 size="lg"
                 className="group relative overflow-hidden bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/10"
-                onClick={() => window.open("https://instagram.com/starling_events_", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://instagram.com/starling_events_",
+                    "_blank"
+                  )
+                }
               >
                 <Instagram className="h-5 w-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                 Follow Us
@@ -84,10 +93,10 @@ export function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "Home", href: "/" },
-                { name: "Services", href: "#services" },
+                { name: "Services", href: "/#services" },
                 { name: "About Us", href: "/about" },
-                { name: "Gallery", href: "#gallery" },
-                { name: "Contact", href: "#contact" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "Contact", href: "/#contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -95,7 +104,9 @@ export function Footer() {
                     className="group flex items-center space-x-2 text-gray-300 hover:text-white transition-all duration-300"
                   >
                     <div className="w-1 h-1 bg-rose-300/60 rounded-full group-hover:w-2 group-hover:h-2 group-hover:bg-rose-300 transition-all duration-300"></div>
-                    <span className="group-hover:translate-x-1 transition-transform duration-300">{link.name}</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      {link.name}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -106,24 +117,33 @@ export function Footer() {
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-slate-600 to-slate-500 rounded-full flex items-center justify-center border border-white/10">
-                <Sparkles className="h-4 w-4 text-white/80 animate-spin" style={{ animationDuration: "3s" }} />
+                <Sparkles
+                  className="h-4 w-4 text-white/80 animate-spin"
+                  style={{ animationDuration: "3s" }}
+                />
               </div>
               <h3 className="text-xl font-light text-white/90">Our Services</h3>
             </div>
             <ul className="space-y-3">
-              {["Wedding Planning", "Corporate Events", "Birthday Parties", "Music Concerts", "Photography"].map(
-                (service) => (
-                  <li key={service}>
-                    <Link
-                      href="#"
-                      className="group flex items-center space-x-2 text-gray-300 hover:text-white transition-all duration-300"
-                    >
-                      <div className="w-1 h-1 bg-purple-300/60 rounded-full group-hover:w-2 group-hover:h-2 group-hover:bg-purple-300 transition-all duration-300"></div>
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">{service}</span>
-                    </Link>
-                  </li>
-                ),
-              )}
+              {[
+                "Wedding Planning",
+                "Corporate Events",
+                "Birthday Parties",
+                "Music Concerts",
+                "Photography",
+              ].map((service) => (
+                <li key={service}>
+                  <Link
+                    href="#"
+                    className="group flex items-center space-x-2 text-gray-300 hover:text-white transition-all duration-300"
+                  >
+                    <div className="w-1 h-1 bg-purple-300/60 rounded-full group-hover:w-2 group-hover:h-2 group-hover:bg-purple-300 transition-all duration-300"></div>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      {service}
+                    </span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -143,26 +163,27 @@ export function Footer() {
           <div className="flex items-center space-x-2">
             <p className="text-gray-400 text-sm">
               &copy; 2024 Starling Events. Crafted with{" "}
-              <Heart className="inline h-4 w-4 text-rose-300/60 animate-pulse" /> in Kerala
+              <Heart className="inline h-4 w-4 text-rose-300/60 animate-pulse" />{" "}
+              in Kerala
             </p>
           </div>
 
           <div className="flex items-center space-x-6">
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors text-sm relative group"
-              >
-                {item}
-                <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-rose-300/60 to-purple-300/60 group-hover:w-full transition-all duration-300"></div>
-              </Link>
-            ))}
+            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
+              (item) => (
+                <Link
+                  key={item}
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors text-sm relative group"
+                >
+                  {item}
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-rose-300/60 to-purple-300/60 group-hover:w-full transition-all duration-300"></div>
+                </Link>
+              )
+            )}
           </div>
         </div>
-
-
       </div>
     </footer>
-  )
+  );
 }

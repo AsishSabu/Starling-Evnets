@@ -37,7 +37,7 @@ export const servicesData = {
     },
     {
       id: 3,
-      title: "Beautician Services",
+      title: "Makeup Services",
       description:
         "Look your best on your special day with our premium makeup and grooming services. Our beauty experts bring out your natural glow with the latest trends and top-tier products.",
       image: "/images/beutician.jpg",

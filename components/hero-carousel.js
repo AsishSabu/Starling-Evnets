@@ -10,7 +10,7 @@ const carouselItems = [
     id: 1,
     title: "Dream Wedding Events",
     subtitle: "We Plan to Make Your Every Moment Just as a Dream",
-    description: "Complete wedding planning with decoration, beautician services, photography, and catering.",
+    description: "Complete wedding planning with decoration, makeup services, photography, and catering.",
     image: "/images/hero4.jpg",
     accent: "rose",
     gradient: "from-rose-500 via-pink-500 to-rose-600",
