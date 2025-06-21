@@ -59,7 +59,7 @@ export function Footer() {
               <Button
                 size="lg"
                 className="group relative overflow-hidden bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/10"
-                onClick={() => window.open("https://instagram.com/starlingevents", "_blank")}
+                onClick={() => window.open("https://instagram.com/starling_events_", "_blank")}
               >
                 <Instagram className="h-5 w-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                 Follow Us
