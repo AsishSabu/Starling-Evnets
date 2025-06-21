@@ -1,34 +1,30 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Phone, Mail, MessageCircle, Copy, Check, MapPin } from "lucide-react"
-import { useState } from "react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Phone, Mail, MessageCircle, Copy, Check, MapPin } from "lucide-react";
+import { useState } from "react";
 
 export function AboutCTA() {
-  const [copiedEmail, setCopiedEmail] = useState(false)
-  const [copiedPhone, setCopiedPhone] = useState(false)
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = async () => {
-    await navigator.clipboard.writeText("starlingeventscmt@gmail.com")
-    setCopiedEmail(true)
-    setTimeout(() => setCopiedEmail(false), 2000)
-  }
-
-  const handleCopyPhone = async () => {
-    await navigator.clipboard.writeText("+919400632524")
-    setCopiedPhone(true)
-    setTimeout(() => setCopiedPhone(false), 2000)
-  }
+    await navigator.clipboard.writeText("starlingeventscmt@gmail.com");
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
 
   return (
     <section className="py-20 bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500">
       <div className="container mx-auto px-4">
         <Card className="bg-white/10 backdrop-blur-xl border-white/20 text-white max-w-4xl mx-auto">
           <CardContent className="p-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-light mb-6">Ready to Create Magic?</h2>
+            <h2 className="text-4xl md:text-5xl font-light mb-6">
+              Ready to Create Magic?
+            </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Your perfect event is just one conversation away. Choose your preferred way to connect with us.
+              Your perfect event is just one conversation away. Choose your
+              preferred way to connect with us.
             </p>
 
             {/* Primary Contact Methods */}
@@ -39,14 +35,16 @@ export function AboutCTA() {
                 className="bg-white text-rose-600 hover:bg-white/90 px-6 py-4 rounded-full h-auto"
                 onClick={() =>
                   window.open(
-                    "mailto:starlingeventscmt@gmail.com?subject=Event Planning Inquiry&body=Hi! I would like to discuss planning an event. Please contact me back.",
+                    "mailto:starlingeventscmt@gmail.com?subject=Event Planning Inquiry&body=Hi! I would like to discuss planning an event. Please contact me back."
                   )
                 }
               >
                 <Mail className="w-5 h-5 mr-3" />
                 <div className="text-left">
                   <div className="font-semibold">Email Us</div>
-                  <div className="text-sm opacity-80">starlingeventscmt@gmail.com</div>
+                  <div className="text-sm opacity-80">
+                    starlingeventscmt@gmail.com
+                  </div>
                 </div>
               </Button>
 
@@ -57,7 +55,7 @@ export function AboutCTA() {
                 onClick={() =>
                   window.open(
                     "https://wa.me/919400632524?text=Hi! I would like to discuss planning an event with Starling Events.",
-                    "_blank",
+                    "_blank"
                   )
                 }
               >
@@ -103,7 +101,9 @@ export function AboutCTA() {
 
             {/* Contact Info Grid */}
             <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-              <h3 className="text-lg font-semibold mb-6">Multiple Ways to Reach Us</h3>
+              <h3 className="text-lg font-semibold mb-6">
+                Multiple Ways to Reach Us
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <div className="text-center">
                   <Phone className="w-5 h-5 mx-auto mb-2" />
@@ -131,5 +131,5 @@ export function AboutCTA() {
         </Card>
       </div>
     </section>
-  )
+  );
 }

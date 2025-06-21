@@ -1,6 +1,5 @@
 import Image from "next/image"
-import { Badge } from "@/components/ui/badge"
-import { Heart, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
 export function AboutHero() {

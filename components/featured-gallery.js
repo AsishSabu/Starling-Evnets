@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import { Crown, Sparkles, Heart, ArrowRight } from "lucide-react"
 import { galleryData } from "@/data/gallery-data"
 import Link from "next/link"
