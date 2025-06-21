@@ -70,7 +70,6 @@ export function ServicesSection() {
                         </Badge>
                       ))}
                     </div>
-                    {/* <Button className="w-full group-hover:bg-primary/90 transition-colors">Learn More</Button> */}
                   </CardContent>
                 </Card>
               );

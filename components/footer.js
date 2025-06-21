@@ -1,209 +1,167 @@
-import Link from "next/link";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
+"use client"
+
+import Link from "next/link"
+import { Instagram, Heart, Sparkles, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
+import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
+    <footer className="relative bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white overflow-hidden">
+      {/* Beautiful Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-rose-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "4s" }}
+        ></div>
+      </div>
+
+      {/* Decorative top border */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500"></div>
+
+      <div className="container mx-auto px-4 py-16 lg:py-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* Enhanced Company Info */}
+          <div className="space-y-6 lg:col-span-2">
+            <Link href="/" className="group flex items-center space-x-3">
               <div className="relative">
+                <div className="absolute -inset-3 bg-gradient-to-r from-rose-400/20 via-purple-400/20 to-amber-400/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 blur-lg"></div>
                 <Image
                   src="/images/logo2.png"
                   alt="Starling Events Logo"
-                  width={40}
-                  height={40}
-                  className="group-hover:rotate-12 transition-transform duration-500"
+                  width={48}
+                  height={48}
+                  className="relative group-hover:rotate-12 transition-transform duration-500"
                   priority
                 />
-                <div className="absolute -inset-2 bg-gradient-to-r from-rose-400/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
               </div>
-              <span className="text-2xl font-bold">StarlingEvents</span>
+              <div>
+                <span className="text-3xl font-light bg-gradient-to-r from-rose-400 via-purple-400 to-amber-400 bg-clip-text text-transparent">
+                  Starling
+                </span>
+                <span className="text-3xl font-light text-white">Events</span>
+              </div>
             </Link>
-            <p className="text-slate-300 text-sm leading-relaxed">
-              Creating unforgettable experiences through exceptional event
-              planning and management. Your vision, our expertise.
+
+            <p className="text-gray-300 text-lg leading-relaxed max-w-md font-light">
+              Creating unforgettable experiences through exceptional event planning and management. Where dreams meet
+              reality, and every moment becomes magical.
             </p>
-            <div className="flex space-x-4">
+
+            {/* Beautiful Instagram Button */}
+            <div className="flex items-center space-x-4">
               <Button
-                size="icon"
-                variant="ghost"
-                className="hover:bg-slate-800"
+                size="lg"
+                className="group relative overflow-hidden bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                onClick={() => window.open("https://instagram.com/starlingevents", "_blank")}
               >
-                <Facebook className="h-5 w-5" />
+                <Instagram className="h-5 w-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+                Follow Us
+                <div className="absolute inset-0 bg-white/20 translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               </Button>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="hover:bg-slate-800"
-              >
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="hover:bg-slate-800"
-              >
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="hover:bg-slate-800"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Button>
+
+              <div className="flex items-center space-x-2 text-gray-400">
+                <Heart className="h-4 w-4 text-rose-400 animate-pulse" />
+                <span className="text-sm">Follow for daily inspiration</span>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#services"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#about"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#gallery"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
+          {/* Enhanced Quick Links */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-rose-400 to-purple-500 rounded-full flex items-center justify-center">
+                <ArrowRight className="h-4 w-4 text-white" />
+              </div>
+              <h3 className="text-xl font-light text-white">Quick Links</h3>
+            </div>
+            <ul className="space-y-3">
+              {[
+                { name: "Home", href: "/" },
+                { name: "Services", href: "#services" },
+                { name: "About Us", href: "/about" },
+                { name: "Gallery", href: "#gallery" },
+                { name: "Contact", href: "#contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="group flex items-center space-x-2 text-gray-300 hover:text-white transition-all duration-300"
+                  >
+                    <div className="w-1 h-1 bg-rose-400 rounded-full group-hover:w-2 group-hover:h-2 transition-all duration-300"></div>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">{link.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Our Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Wedding Planning
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Corporate Events
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Birthday Parties
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Music Concerts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-300 hover:text-white transition-colors"
-                >
-                  Photography
-                </Link>
-              </li>
+          {/* Enhanced Services */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-amber-500 rounded-full flex items-center justify-center">
+                <Sparkles className="h-4 w-4 text-white animate-spin" style={{ animationDuration: "3s" }} />
+              </div>
+              <h3 className="text-xl font-light text-white">Our Services</h3>
+            </div>
+            <ul className="space-y-3">
+              {["Wedding Planning", "Corporate Events", "Birthday Parties", "Music Concerts", "Photography"].map(
+                (service) => (
+                  <li key={service}>
+                    <Link
+                      href="#"
+                      className="group flex items-center space-x-2 text-gray-300 hover:text-white transition-all duration-300"
+                    >
+                      <div className="w-1 h-1 bg-purple-400 rounded-full group-hover:w-2 group-hover:h-2 transition-all duration-300"></div>
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">{service}</span>
+                    </Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
+        </div>
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact Info</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-white flex-shrink-0" />
-                <span className="text-slate-300">
-                  Starling Events, Cumbummettu
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-white flex-shrink-0" />
-                <span className="text-slate-300">+919400632524</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-white flex-shrink-0" />
-                <span className="text-slate-300">
-                  starlingeventscmt@gmail.com
-                </span>
-              </div>
+        {/* Beautiful Separator */}
+        <div className="my-12 lg:my-16">
+          <div className="relative">
+            <Separator className="bg-white/20" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900 px-6">
+              <Heart className="h-4 w-4 text-rose-400 animate-pulse" />
             </div>
           </div>
         </div>
 
-        <Separator className="my-8 bg-slate-700" />
+        {/* Enhanced Bottom Section with Developer Signature */}
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-2 lg:space-y-0">
+          <div className="flex items-center space-x-2">
+            <p className="text-gray-400 text-sm">
+              &copy; 2024 Starling Events. Crafted with <Heart className="inline h-4 w-4 text-rose-400 animate-pulse" />{" "}
+              in Kerala
+            </p>
+          </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-slate-400">
-          <p>&copy; 2024 StarlingEvents. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Cookie Policy
-            </Link>
+          <div className="flex items-center space-x-6">
+            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
+              <Link
+                key={item}
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors text-sm relative group"
+              >
+                {item}
+                <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-rose-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
+              </Link>
+            ))}
           </div>
         </div>
+
       </div>
     </footer>
-  );
+  )
 }
