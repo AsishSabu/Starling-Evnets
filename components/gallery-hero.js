@@ -16,7 +16,7 @@ export function GalleryHero() {
         ></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 mt-6">
         <div className="text-center max-w-4xl mx-auto">
           <Badge variant="outline" className="mb-6 px-6 py-2 text-sm font-light border-rose-200 text-rose-600">
             <Camera className="w-4 h-4 mr-2" />

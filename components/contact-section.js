@@ -123,11 +123,11 @@ export function ContactSection() {
           </div>
 
           {/* Contact Information Card */}
-          <Card className="shadow-2xl border-0 bg-gradient-to-br from-white via-rose-50/30 to-purple-50/30 backdrop-blur-xl">
+          <Card className="shadow-2xl border-0 bg-gradient-to-br from-white via-rose-50/20 to-purple-50/20 backdrop-blur-xl">
             <CardContent className="px-8">
               <div className="space-y-6">
                 <div className="text-center py-6">
-                  <div className="bg-gradient-to-r from-rose-400 via-purple-400 to-amber-400 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <div className="bg-gradient-to-r from-rose-300/80 via-purple-300/80 to-amber-300/80 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <Phone className="h-10 w-10 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold mb-3 text-gray-800">
@@ -143,7 +143,7 @@ export function ContactSection() {
                     <div className="grid grid-cols-1 gap-4">
                       <a href="tel:+919400632524">
                         <Button
-                          className="w-full bg-gradient-to-r from-rose-500 to-purple-500 hover:from-rose-600 hover:to-purple-600 text-white shadow-lg"
+                          className="w-full bg-gradient-to-r from-rose-400/90 to-purple-400/90 hover:from-rose-500/90 hover:to-purple-500/90 text-white shadow-lg"
                           size="lg"
                         >
                           <Phone className="h-5 w-5 mr-3" />
@@ -152,7 +152,7 @@ export function ContactSection() {
                       </a>
 
                       <Button
-                        className="w-full bg-green-500 hover:bg-green-600 text-white shadow-lg"
+                        className="w-full bg-green-400/90 hover:bg-green-500/90 text-white shadow-lg"
                         size="lg"
                         onClick={() =>
                           window.open(
@@ -168,7 +168,7 @@ export function ContactSection() {
                       <a href="mailto:starlingeventscmt@gmail.com?subject=Professional%20Event%20Planning%20Consultation%20Request">
                         <Button
                           variant="outline"
-                          className="w-full border-2 border-rose-200 text-rose-600 hover:bg-rose-50 shadow-lg"
+                          className="w-full border-2 border-rose-200/80 text-rose-500/90 hover:bg-rose-50/80 shadow-lg"
                           size="lg"
                         >
                           <Mail className="h-5 w-5 mr-3" />
@@ -182,7 +182,7 @@ export function ContactSection() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 text-xs border-rose-200 text-rose-600 hover:bg-rose-50"
+                        className="flex-1 text-xs border-rose-200/80 text-rose-500/90 hover:bg-rose-50/80"
                         onClick={handleCopyPhone}
                       >
                         {copiedPhone ? (
@@ -200,7 +200,7 @@ export function ContactSection() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="flex-1 text-xs border-purple-200 text-purple-600 hover:bg-purple-50"
+                        className="flex-1 text-xs border-purple-200/80 text-purple-500/90 hover:bg-purple-50/80"
                         onClick={handleCopyEmail}
                       >
                         {copiedEmail ? (
@@ -225,17 +225,17 @@ export function ContactSection() {
 
         {/* Google Map Section */}
 
-        <div className="mt-20">
+       <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-light mb-6 text-gray-800">
               Visit Our{" "}
               <span className="bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 bg-clip-text text-transparent font-medium">
-                Office
+                 Office
               </span>
             </h3>
             <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-              Schedule an in-person consultation at our Cumbummettu office to
-              discuss your event planning requirements with our team.
+              Schedule an in-person consultation at our Cumbummettu office to discuss your event planning requirements
+              with our professional team.
             </p>
           </div>
 

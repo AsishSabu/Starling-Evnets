@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Sparkles } from 'lucide-react'
+import {  Sparkles } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
 export function AboutHero() {
@@ -23,7 +23,7 @@ export function AboutHero() {
           <div className="lg:pr-8">
 
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light my-10 leading-tight">
               <span className="block">Creating</span>
               <span className="block bg-gradient-to-r from-rose-500 via-purple-500 to-amber-500 bg-clip-text text-transparent">
                 Magical Moments
@@ -49,12 +49,14 @@ export function AboutHero() {
             </Button>
           </div>
 
+          {/* Image - Reduced Height */}
           <div className="relative w-full">
             <div className="relative aspect-[4/3] sm:aspect-[3/2] lg:aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
-              <Image src="/images/about2.jpg" alt="Beautiful event setup" fill  className="object-cover rounded-2xl " />
+              <Image src="/images/about2.jpg" alt="Beautiful event setup" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             </div>
 
+            {/* Floating stat - Better positioned */}
             <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 bg-white/95 backdrop-blur-sm p-4 sm:p-5 rounded-2xl shadow-xl">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-rose-600">100+</div>
