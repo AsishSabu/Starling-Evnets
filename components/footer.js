@@ -159,7 +159,7 @@ export function Footer() {
         </div>
 
         {/* Professional Bottom Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0">
           <div className="flex items-center space-x-2">
             <p className="text-gray-400 text-sm">
               &copy; 2024 Starling Events. Crafted with{" "}
@@ -168,20 +168,6 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center space-x-6">
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
-              (item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors text-sm relative group"
-                >
-                  {item}
-                  <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-rose-300/60 to-purple-300/60 group-hover:w-full transition-all duration-300"></div>
-                </Link>
-              )
-            )}
-          </div>
         </div>
       </div>
     </footer>
